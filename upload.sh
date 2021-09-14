@@ -1,5 +1,6 @@
 line=$(ls -l | grep lesson | tail -1 | sed 's/.* //g')
-line='Добавлен файл: '$line
+line=$line
 git add ./
-git commit -a -m '$line'
-git push origin
+git commit -a -m $line
+#git push origin
+echo $line
