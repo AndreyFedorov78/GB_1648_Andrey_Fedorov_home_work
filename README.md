@@ -1,1 +1,1 @@
-# GB_1648_Andrey_Fedorov_home_work
+Это папка для загрузки ДЗ по курсу C
