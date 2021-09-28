@@ -48,7 +48,7 @@ int get_int_from_prompt(void)
 
 int is_prime(int x)
 {
-  if (x<4) {  //  1,2,3 - простые числа
+  if (x<4) {  //  2,3 - простые числа // а вот 1 оказывается не является простым :((((
     return true;
   }
   for (int i=2; i<x; i++){
@@ -62,7 +62,7 @@ int is_prime(int x)
 void print_primes(int n)
 {
   int count = 0;
-  int i = 1;
+  int i = 2;
   while (count<n){
     if (is_prime(i)){
      printf("%d ",i);
