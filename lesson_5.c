@@ -24,7 +24,7 @@ int main(void)
   print_primes(input);
 
  //было не остановиться
- printf("\nВведите число для разложения на множетели: ");
+ printf("\nВведите число для разложения на множители: ");
  do {
    input = get_int_from_prompt();
  } while (input <1);
