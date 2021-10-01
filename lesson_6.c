@@ -18,32 +18,32 @@ double get_double_from_char(void);  // читаем  double из буфера
 int main(void)
 {
   char_calculate();
-   printf("Введите  вещественное число (возможно использование префиксов 0x или 0b) :");
+  printf("Введите  вещественное число (возможно использование префиксов 0x или 0b) :");
   printf("результат %f\n",get_double_from_char());
 }
 
 
 void char_calculate(void)
 {
-   printf("Введите любую строку, будем её анализировать:");
+  printf("Введите любую строку, будем её анализировать:");
   char buff;
   int count = 0, count_a_z = 0, count_A_Z = 0, count_dig = 0, count_space = 0;
   float  perc_a_z, perc_A_Z, perc_dig, perc_space;
   while ( (buff = getchar()) != '\n'){
-   count ++;
-   count_a_z += buff_a_z? 1 : 0;
-   count_A_Z += buff_A_Z? 1 : 0;
-   count_dig += buff_0_9? 1 : 0;
-   count_space += buff_space? 1 : 0;
+    count ++;
+    count_a_z += buff_a_z? 1 : 0;
+    count_A_Z += buff_A_Z? 1 : 0;
+    count_dig += buff_0_9? 1 : 0;
+    count_space += buff_space? 1 : 0;
   }
-   perc_a_z = 100.0f * count_a_z / count ;
-   perc_A_Z = 100.0f * count_A_Z / count ;
-   perc_dig = 100.0f * count_dig / count ;
-   perc_space = 100.0f * count_space /count ;
-   printf("в строке %d (%0.1f%%) пробелов, ", count_space, perc_space );
-   printf("%d (%0.1f%%)  цифр, ", count_dig, perc_dig );
-   printf("%d (%0.1f%%) английских букв верхнего регистра, ", count_A_Z, perc_A_Z );
-   printf("%d (%0.1f%%) английских букв нижнего регистра\n", count_a_z, perc_a_z );
+  perc_a_z = 100.0f * count_a_z / count ;
+  perc_A_Z = 100.0f * count_A_Z / count ;
+  perc_dig = 100.0f * count_dig / count ;
+  perc_space = 100.0f * count_space /count ;
+  printf("в строке %d (%0.1f%%) пробелов, ", count_space, perc_space );
+  printf("%d (%0.1f%%)  цифр, ", count_dig, perc_dig );
+  printf("%d (%0.1f%%) английских букв верхнего регистра, ", count_A_Z, perc_A_Z );
+  printf("%d (%0.1f%%) английских букв нижнего регистра\n", count_a_z, perc_a_z );
 }
 
 
