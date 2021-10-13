@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <stdint.h>
 
 #define buff_0_9 (buff >= '0' && buff <= '9')
 #define buff_a_z (buff >= 'a' && buff <= 'z')
@@ -99,7 +100,6 @@ double get_double_from_char(void)
         }
       }
     }
-
   }
   return token * result;
 };
