@@ -20,13 +20,13 @@ https://github.com/008agent/c_basics_1648/blob/master/lesson8/main.c
 поэтому добавил режим компиляции "DEBUG"
 */
 
-//#define DEBUG
+#define DEBUG 0
 #define DEBUG_PRINT printf("\n%d\n", ref);print_array(arr,n,true);print_array(arr,l+1,false);print_array(&arr[r],n-r,true);
 
 // массивы на которых получались ошибки
 #define EXAMPLE_1 {1,2,10,20,10,15,33,1,2,0}
 #define EXAMPLE_2 {1,4,4,4,4,4,4,4,4,4}
-#define EXAMPLE_3 { 28,-33,  8,-92, 62,-75, -9, 44,-62, 70}
+#define EXAMPLE_3 { 10,1, 1, 1, 10, 10, 1, 1,1, 10}
 #define EXAMPLE_4 { 58, 94, 62, 98,-24, 97, 14,-94, 60,-90}
 #define EXAMPLE_5 { 40, 97,-55, 27,-13, 41, 65,  9,-24,  1}
 
@@ -40,7 +40,7 @@ void replace_elements (int arr[], int8_t x, int8_t y); // перестановк
 int main(void)
 {
   srand(time(NULL));
-  int a[10] = EXAMPLE_1;  // сортируем один заданный массив
+  int a[10] = EXAMPLE_5;  // сортируем один заданный массив
   show_sort(a,10);
   for (int8_t i=0; i<10; i++){ // и 10 случайных
     fill_array(a,10);
@@ -59,7 +59,7 @@ void qsort_array(int arr[], int8_t n)
     while (arr[r] < ref ) r++;
     if (r <= l) replace_elements (arr, r++, l--);
   }
-  #ifdef DEBUG
+  #if DEBUG
   DEBUG_PRINT
   #endif
   if (l > 0 ) qsort_array(arr,l+1);       // левый блок
