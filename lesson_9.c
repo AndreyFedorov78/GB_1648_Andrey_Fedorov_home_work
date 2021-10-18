@@ -38,22 +38,18 @@ int calculate(char *str)
 {
   int result=get_number(&str);
   while (*str != '\0'){
-    switch (*str) {
+    switch (*str++) {
       case '+':
-        str++;
-        result=result+get_number(&str);
+        result+=get_number(&str);
         break;
       case '-':
-        str++;
-        result=result-get_number(&str);
+        result-=get_number(&str);
         break;
       case '*':
-        str++;
-        result=result*get_number(&str);
+        result*=get_number(&str);
         break;
-      case '/':
-        str++;
-        result=result/get_number(&str);
+      case '/':    // сюда можно было добавить проверку деления на 0
+        result/=get_number(&str);
         break;
     }
   }
