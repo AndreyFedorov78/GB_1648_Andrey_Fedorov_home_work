@@ -7,7 +7,8 @@
 #include "termometr.h"
 #include <stdlib.h>
 #include <stdbool.h>
-#include <stding.h>
+#include <string.h>
+#include <stdint.h>
 #include <unistd.h>
 
 
