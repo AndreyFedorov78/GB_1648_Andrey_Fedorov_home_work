@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+
 int main(void){
   printf("task 1:\n");
 	printf("My\n   name\n      is\n        Andrey\n\n");
